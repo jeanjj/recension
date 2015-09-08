@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Auteur:</strong>
+  <%= @oeuvre.auteur %>
+</p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @oeuvre.titre %>
+</p>
+
+<p>
+  <strong>Forme:</strong>
+  <%= @oeuvre.forme %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @oeuvre.date %>
+</p>
+
+<p>
+  <strong>Localisation:</strong>
+  <%= @oeuvre.localisation %>
+</p>
+
+<p>
+  <strong>Descritpion:</strong>
+  <%= @oeuvre.descritpion %>
+</p>
+
+<p>
+  <strong>Critiques:</strong>
+  <%= @oeuvre.critiques %>
+</p>
+
+<p>
+  <strong>Connexes:</strong>
+  <%= @oeuvre.connexes %>
+</p>
+
+<%= link_to 'Edit', edit_oeuvre_path(@oeuvre) %> |
+<%= link_to 'Back', oeuvres_path %>

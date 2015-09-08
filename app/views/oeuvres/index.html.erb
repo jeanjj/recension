@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<header id="header">
+
+</header>
+
+
+   
+<body>
+
+  <div id="firstscreen">
+    <p id="websitename">
+      Recension
+    </p>
+  </div>
+  <div>
+    <% @oeuvres.each do |oeuvre| %>
+      <div>
+        <div><%= oeuvre.auteur %></div>
+        <div><%= oeuvre.titre %></div>
+        <div><%= oeuvre.forme %></div>
+        <div><%= oeuvre.date %></div>
+        <div><%= oeuvre.localisation %></div>
+        <div><%= oeuvre.descritpion %></div>
+        <div><%= oeuvre.critiques %></div>
+        <div><%= oeuvre.connexes %></div>
+        <div><%= link_to 'Show', oeuvre %></div>
+        <div><%= link_to 'Edit', edit_oeuvre_path(oeuvre) %></div>
+        <div><%= link_to 'Destroy', oeuvre, medivod: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+    <% end %>
+  </div>
+
+</body>
+
+<br>
+
+<%= link_to 'New Oeuvre', new_oeuvre_path %>
