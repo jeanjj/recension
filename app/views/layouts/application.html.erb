@@ -8,6 +8,22 @@
 </head>
 <body>
 
+  <div class="row navbar navbar-default navbar-fixed-top" id="header">
+    <div class="col-md-4" id="websitename">
+      <%= link_to "Recension", root_path%>
+    </div>
+    <div class="col-md-2" id="search">
+      Search
+    </div>
+      <div class="col-md-2" id="rank">
+        Rank
+      </div>
+      <div class="col-md-2" id="create">
+        <%= link_to 'New Oeuvre', new_oeuvre_path %>
+      </div>
+
+  </div>
+
 <%= yield %>
 
 </body>

@@ -1,32 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<header id="header">
-
+<header>
 </header>
 
-
-   
 <body>
 
   <div id="firstscreen">
-    <p id="websitename">
-      Recension
-    </p>
+
   </div>
-  <div>
+  <div class="row" id="index">
     <% @oeuvres.each do |oeuvre| %>
-      <div>
-        <div><%= oeuvre.auteur %></div>
-        <div><%= oeuvre.titre %></div>
-        <div><%= oeuvre.forme %></div>
-        <div><%= oeuvre.date %></div>
-        <div><%= oeuvre.localisation %></div>
-        <div><%= oeuvre.descritpion %></div>
-        <div><%= oeuvre.critiques %></div>
-        <div><%= oeuvre.connexes %></div>
-        <div><%= link_to 'Show', oeuvre %></div>
-        <div><%= link_to 'Edit', edit_oeuvre_path(oeuvre) %></div>
-        <div><%= link_to 'Destroy', oeuvre, medivod: :delete, data: { confirm: 'Are you sure?' } %></div>
+      <div class="col-sm-4 pad-bot" id="index-projects">
+        <div class= "thumbnail">
+          <div class="row center"><%= oeuvre.auteur %></div>
+          <div class="row center"><%= oeuvre.titre %></div>
+          <div class="row center"><%= oeuvre.forme %></div>
+          <div class="row center"><%= oeuvre.date %></div>
+          <div id="short_description" class="row center"><%= oeuvre.descritpion %></div>
+          <div><%= link_to 'Show', oeuvre %></div>
+          <div><%= link_to 'Edit', edit_oeuvre_path(oeuvre) %></div>
+          <div><%= link_to 'Destroy', oeuvre, medivod: :delete, data: { confirm: 'Are you sure?' } %></div>
+        </div>
       </div>
     <% end %>
   </div>
@@ -35,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Oeuvre', new_oeuvre_path %>
+

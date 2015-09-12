@@ -1,44 +1,55 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Auteur:</strong>
-  <%= @oeuvre.auteur %>
-</p>
+<div id="show">
+  <div class="col-md-2" id="show-col-1">
+    <div class="row">
+        <p>
+          <!--<strong>Auteur:</strong>-->
+          <%= @oeuvre.auteur %>
+        </p>
+        <p>
+          <!--<strong>Titre:</strong>-->
+          <%= @oeuvre.titre %>
+        </p>
+    </div>
 
-<p>
-  <strong>Titre:</strong>
-  <%= @oeuvre.titre %>
-</p>
+    <div class="row">
+      <p>
+        <!--<strong>Forme:</strong>-->
+        <%= @oeuvre.forme %>
+      </p>
 
-<p>
-  <strong>Forme:</strong>
-  <%= @oeuvre.forme %>
-</p>
+      <p>
+        <!--<strong>Date:</strong>-->
+        <%= @oeuvre.date %>
+      </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @oeuvre.date %>
-</p>
+      <p>
+        <strong>Localisation:</strong>
+        <%= link_to "#{@oeuvre.localisation}", target: :_blank %>
+      </p>
+    </div>
+  </div>
 
-<p>
-  <strong>Localisation:</strong>
-  <%= @oeuvre.localisation %>
-</p>
-
-<p>
-  <strong>Descritpion:</strong>
-  <%= @oeuvre.descritpion %>
-</p>
-
-<p>
-  <strong>Critiques:</strong>
-  <%= @oeuvre.critiques %>
-</p>
-
-<p>
-  <strong>Connexes:</strong>
-  <%= @oeuvre.connexes %>
-</p>
+  <div class="col-md-10">
+  <p>
+    <strong>Descritpion:</strong>
+    <%= @oeuvre.descritpion %>
+  </p>
+  </div>
+  <div class="row">
+  <p>
+    <strong>Critiques:</strong>
+    <%= @oeuvre.critiques %>
+  </p>
+  </div>
+  <div class="row">
+  <p>
+    <strong>Connexes:</strong>
+    <%= @oeuvre.connexes %>
+  </p>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_oeuvre_path(@oeuvre) %> |
 <%= link_to 'Back', oeuvres_path %>
