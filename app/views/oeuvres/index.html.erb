@@ -10,16 +10,12 @@
   </div>
   <div class="row" id="index">
     <% @oeuvres.each do |oeuvre| %>
-      <div class="col-sm-4 pad-bot" id="index-projects">
-        <div class= "thumbnail">
-          <div class="row center"><%= oeuvre.auteur %></div>
-          <div class="row center"><%= oeuvre.titre %></div>
-          <div class="row center"><%= oeuvre.forme %></div>
-          <div class="row center"><%= oeuvre.date %></div>
-          <div id="short_description" class="row center"><%= oeuvre.descritpion %></div>
-          <div><%= link_to 'Show', oeuvre %></div>
-          <div><%= link_to 'Edit', edit_oeuvre_path(oeuvre) %></div>
-          <div><%= link_to 'Destroy', oeuvre, medivod: :delete, data: { confirm: 'Are you sure?' } %></div>
+      <div class="row" id="index-projects">
+        <div class= "thumbnail" id="thumbnail">
+          <div class="row center pad-top" id="thumb-author"><%= oeuvre.auteur %></div>
+          <div class="row center" id="thumb-title"><%= link_to "#{oeuvre.titre}", oeuvre %></div>
+          <div id="short_description" class="row center  pad-top" id="thumb-desc"><%= oeuvre.descritpion %></div>
+         <div class="row center pad-top" id="thumb-forme"><%= oeuvre.forme %> - <%= oeuvre.date %></div>
         </div>
       </div>
     <% end %>

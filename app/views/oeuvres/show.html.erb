@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <div id="show">
-  <div class="col-md-2" id="show-col-1">
+  <div class="row">
+  <div class="col-md-3" id="show-col-1">
     <div class="row">
         <p>
           <!--<strong>Auteur:</strong>-->
           <%= @oeuvre.auteur %>
         </p>
-        <p>
+        <p id="thumb-title">
           <!--<strong>Titre:</strong>-->
           <%= @oeuvre.titre %>
         </p>
@@ -16,12 +17,8 @@
     <div class="row">
       <p>
         <!--<strong>Forme:</strong>-->
-        <%= @oeuvre.forme %>
-      </p>
+        <%= @oeuvre.forme %> - <%= @oeuvre.date %>
 
-      <p>
-        <!--<strong>Date:</strong>-->
-        <%= @oeuvre.date %>
       </p>
 
       <p>
@@ -30,13 +27,16 @@
       </p>
     </div>
   </div>
-
-  <div class="col-md-10">
+  <div class="col-md-8" id="show-desc">
   <p>
     <strong>Descritpion:</strong>
     <%= @oeuvre.descritpion %>
   </p>
   </div>
+  <div class="col-md-1">
+  </div>
+  </div>
+
   <div class="row">
   <p>
     <strong>Critiques:</strong>
@@ -51,5 +51,7 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_oeuvre_path(@oeuvre) %> |
-<%= link_to 'Back', oeuvres_path %>
+
+<%= link_to 'Éditer', edit_oeuvre_path(@oeuvre) %>
+<%= link_to 'Supprimer', @oeuvre, method: :delete, data: { confirm: 'Êtes-vous sûr?' } %>
+<%= link_to 'Retour', oeuvres_path %>
